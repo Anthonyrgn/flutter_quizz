@@ -1,5 +1,5 @@
 import 'package:flutterquizz/question.dart';
-
+// Mise en place de la liste des questions que l'on va utiliser
 class Datas {
   List<Question> listeQuestions = [
     Question(question: 'La devise de la Belgique est l\'union fait la force', response: true, explication: '', imagePath: 'belgique.JPG'),
