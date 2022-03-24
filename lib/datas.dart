@@ -10,7 +10,7 @@ class Datas {
     Question(question: 'Le nom du drapeau des pirates es black skull?', response: false, explication: 'Il est appelé Jolly Roger', imagePath: 'pirate.png'),
     Question(question: 'Haddock est le nom du chien Tintin?', response: false, explication: 'C\'est Milou', imagePath: 'tintin.jpg'),
     Question(question: 'La barbe des pharaons était fausse?', response: true, explication: 'A l\'époque déjà ils utilisaient des postiches', imagePath: 'pharaon.jpg'),
-    Question(question: 'Au Québec tire toi une bûche veut dire viens viens t\'asseoir?', response: true, explication: 'La bûche, fameuse chaise de bucheron', imagePath: 'buche.jpg'),
-    Question(question: 'Le module lunaire Eagle de possédait de 4Ko de Ram?', response: true, explication: 'Dire que je me plains avec mes 8GO de ram sur mon mac', imagePath: 'eagle.jpg'),
+    Question(question: 'Au Québec tire toi une bûche veut dire viens t\'asseoir?', response: true, explication: 'La bûche, fameuse chaise de bucheron', imagePath: 'buche.jpg'),
+    Question(question: 'Le module lunaire Eagle doit possédait que 4Ko de Ram?', response: true, explication: 'Dire que je me plains avec mes 8GO de ram sur mon mac', imagePath: 'eagle.jpg'),
   ];
 }

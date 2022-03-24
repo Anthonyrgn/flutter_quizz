@@ -13,7 +13,7 @@ class QuizzPage extends StatefulWidget {
 class QuizzPageState extends State<QuizzPage> {
 
   List<Question> questions = Datas().listeQuestions;
-  int index = 3;
+  int index = 0;
   int score = 0;
 
   @override
@@ -56,10 +56,57 @@ class QuizzPageState extends State<QuizzPage> {
     // params boolean
     return ElevatedButton(
         onPressed: () {
-
+          checkAnswer(b);
         },
         child: Text((b) ? "VRAI" : "FAUX"), // Bouton vrai / faux
       style: ElevatedButton.styleFrom(primary: (b) ? Colors.greenAccent : Colors.redAccent), // Si vrai bouton rouge, sinon bouton faux
     );
   }
+
+  checkAnswer(bool answer){
+
+    final question = questions[index];
+    bool bonneReponse = (question.response == answer);
+
+    if (bonneReponse){
+      setState(() {
+        score++;
+      });
+    }
+    showAnswer(bonneReponse);
+  }
+
+  Future<void> showAnswer(bool bonneReponse) async {
+
+    Question question = questions[index];
+    String title = (bonneReponse) ? "C'est gagné" : "C'est perdu";
+    String imageToShow = (bonneReponse) ? "vrai.jpg" : "cover.jpg";
+    String path = "images/$imageToShow";
+    return showDialog(
+      barrierDismissible: false,
+        context: context,
+        builder: (BuildContext context) {
+          return SimpleDialog(
+            title: TextWidthStyle(
+              data: title,
+            ),
+            children: [
+              Image.asset(path),
+              TextWidthStyle(data: question.explication),
+              TextButton(onPressed: (){
+                Navigator.of(context).pop();
+                toNextQuestion();
+              }, child: TextWidthStyle(data: "Passer à la question suivante",))
+            ],
+          );
+        });
+  }
+
+  void toNextQuestion(){
+    index++;
+    setState(() {
+
+    });
+  }
+
 }

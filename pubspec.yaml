@@ -65,10 +65,14 @@ flutter:
     - images/commodore.jpg
     - images/cover.jpg
     - images/faux.jpg
+    - images/vrai.jpg
     - images/lune.jpg
     - images/nyctalope.jpg
     - images/pharaon.jpg
     - images/pirate.png
+    - images/russie.jpg
+    - images/tintin.jpg
+    - images/eagle.jpg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
